@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pneumonia Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+        h2 {
+            color: #6a0dad;
+            font-weight: 600;
+        }
+        .upload-box img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .upload-btn, .action-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .upload-btn {
+            background: #6a0dad;
+            color: white;
+        }
+        .upload-btn:hover {
+            background: #540b9e;
+        }
+        .report-box {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .action-btn {
+            flex: 1;
+            font-weight: bold;
+        }
+        .diagnose {
+            background: #007bff;
+            color: white;
+        }
+        .diagnose:hover {
+            background: #0056b3;
+        }
+        .export {
+            background: #28a745;
+            color: white;
+        }
+        .export:hover {
+            background: #1e7e34;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 10px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AI Pneumonia Analyzer</h2>
+        <p>Analyze X-Ray images using AI</p>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <div class="upload-box">
+                <img id="preview" src="123.webp" alt="X-ray Image">
+            </div>
+            <input type="file" name="image" id="image" accept="image/*" hidden>
+            <button type="button" class="upload-btn" onclick="document.getElementById('image').click();">Upload Image</button>
+            <input type="hidden" name="filename" value="tt.jpg">
+           
+            <div class="buttons">
+                <button type="submit" class="action-btn diagnose">Diagnose Disease</button>
+               
+            </div>
+        </form>
+        <p class="footer">This project is a prototype and not a substitute for medical diagnosis.</p>
+    </div>
+    <script>
+        document.getElementById('image').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('preview').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
