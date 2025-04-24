@@ -4,3 +4,5 @@
 
 ![image alt](https://github.com/aayushkhond23/pneumonia-detection/blob/453752337fe7300fffdf12915af356a12c25c549/Screenshot%20(195).png)
 
+![image alt](https://github.com/aayushkhond23/pneumonia-detection/blob/2358171f296772b5c5aea61f31c0dd0938ae85d4/Screenshot%20(196).png)
+
