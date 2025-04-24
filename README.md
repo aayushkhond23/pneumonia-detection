@@ -8,3 +8,5 @@
 
 ![image alt](https://github.com/aayushkhond23/pneumonia-detection/blob/896ef0f4bd0d42eee485256359a50ca91096f1ce/Screenshot%20(197).png)
 
+![image alt](https://github.com/aayushkhond23/pneumonia-detection/blob/a7c39923d2e31a5cde8f40616238021868b05592/Screenshot%20(198).png)
+
